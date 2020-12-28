@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::update::</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body allign ="text-center">
+	<div class="container text-center">
+			<h1 class="text-primary">Register</h1>
+		<table class="table table-borderless">
+			<form amethod="POST">
+				{% csrf_token %}
+				<div class="row p-5" >
+					<div class="col-md-4">
+						Name<input class="form-control" type="text" name="name" value="{{info.Name}}">
+					</div>
+					<div class="col-md-4">
+						Branch<input type="text" name="Branch" class="form-control" value="{{info.Branch}}">
+					</div>
+					<div class="col-md-4">
+						Rollno<input type="text" name="Rollno" value="{{info.Rollno}}" class="form-control"><br>
+						Year<input type="text" name="Year" value="{{info.Year}}" class="form-control">
+					</div>
+				</div>
+				<div class="row p-5">
+					<div class="col-md-6">
+						Email<input class="form-control" type="Email" name="Email" value="{{info.Email}}">
+					</div>
+					<div class="col-md-6">
+						semester<input class="form-control" type="text" name="Semester" value="{{info.Semester}}">
+					</div>
+				</div>
+				<div class="row p-5">
+					<div class="col-md-7">
+						password<input type="password" name="password" value="{{info.password}}">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<input type="submit" class="btn btn-info text-center" value="Update">
+					</div>
+					<div class="col-md-4">
+					</div>
+				</div>
+			</form>
+		</table>
+	</div>	
+
+</body>
+</html>

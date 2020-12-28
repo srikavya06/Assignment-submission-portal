@@ -1,0 +1,43 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<style >
+
+		h1{
+			color:blue;
+			font-size: 300%;
+		}
+		input
+		{
+			color:black;
+			font-size: 150%;
+		}
+		body{
+			border-top-width: 200px;
+			border-bottom-width: 50px;
+			border-left-width: 50px;
+			border-right-width: 50px; 
+		}
+	</style>
+	<title>Register</title>
+</head>
+<body style="background-color:powderblue;">
+<center>
+<form method="POST">
+	{% csrf_token %}
+	<h1>Register
+	</h1>
+	Name:    <input type="text" name="name" size=20><br>
+	Branch:  <input type="text" name="branch" size=20><br>
+	Rollno:  <input type="text" name="Rollno",size=30><br>
+	Email:   <input type="email" name="mail" size=20><br>
+	password:<input type="text" name="password" size=20><br>
+	Year<input type="text" name="year" size=20><br>
+	Semster:<input type="text" name="Semester" size=20><br>
+	<input type="submit" name="register" value="register"><br>
+</form>
+</center>
+
+</body>
+</html>
+
